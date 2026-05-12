@@ -27,26 +27,26 @@ if ! [ -x "$(command -v snap)" ]; then
   sudo apt-get install -y snapd
 fi
 
-sudo snap install discord
-sudo snap install spotify
+# sudo snap install discord
+# sudo snap install spotify
 sudo snap install brave
 sudo snap install --classic waveterm
 
 echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-echo "Generating SSH key..."
-ssh-keygen -t ed25519 -C "$(whoami)@$(hostname)" -f "$HOME/.ssh/id_ed25519" -N ""
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-echo "Your SSH public key is:"
-cat ~/.ssh/id_ed25519.pub
+# echo "Generating SSH key..."
+# ssh-keygen -t ed25519 -C "$(whoami)@$(hostname)" -f "$HOME/.ssh/id_ed25519" -N ""
+# eval "$(ssh-agent -s)"
+# ssh-add ~/.ssh/id_ed25519
+# echo "Your SSH public key is:"
+# cat ~/.ssh/id_ed25519.pub
 
 #echo "Setting ZSH as default shell..."
 #chsh -s $(which zsh)
 
-echo "Changing Oh My Zsh theme to bira..."
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="bira"/' ~/.zshrc
+# echo "Changing Oh My Zsh theme to bira..."
+# sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="bira"/' ~/.zshrc
 
 #echo "Setting dark theme..."
 #gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
@@ -73,3 +73,4 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs npm
 
 echo "Setup complete! Please log out and log back in for all changes to take effect."
+echo ">>>> ......... installation is Done!!!!! (>_<) .....<<<<<< "
